@@ -1,0 +1,15 @@
+day,date,attack_event,label,kill_chain_stage,onset_ts,window_start,window_end,matched_flows
+tuesday,2017-07-04,tuesday:FTP-Patator,FTP-Patator,INITIAL_COMPROMISE,2017-07-04 09:20:00-03:00,09:20,10:20,300
+tuesday,2017-07-04,tuesday:SSH-Patator,SSH-Patator,INITIAL_COMPROMISE,2017-07-04 14:00:00-03:00,14:00,15:00,0
+wednesday,2017-07-05,wednesday:DoS slowloris,DoS slowloris,EXFILTRATION,2017-07-05 09:47:00-03:00,09:47,10:10,0
+wednesday,2017-07-05,wednesday:DoS Slowhttptest,DoS Slowhttptest,EXFILTRATION,2017-07-05 10:14:00-03:00,10:14,10:35,0
+wednesday,2017-07-05,wednesday:DoS Hulk,DoS Hulk,EXFILTRATION,2017-07-05 10:43:00-03:00,10:43,11:00,123
+wednesday,2017-07-05,wednesday:DoS GoldenEye,DoS GoldenEye,EXFILTRATION,2017-07-05 11:10:00-03:00,11:10,11:23,0
+wednesday,2017-07-05,wednesday:Heartbleed,Heartbleed,INITIAL_COMPROMISE,2017-07-05 15:12:00-03:00,15:12,15:32,0
+thursday,2017-07-06,thursday:Web Attack - Brute Force,Web Attack - Brute Force,INITIAL_COMPROMISE,2017-07-06 09:20:00-03:00,09:20,10:00,0
+thursday,2017-07-06,thursday:Web Attack - XSS,Web Attack - XSS,INITIAL_COMPROMISE,2017-07-06 10:15:00-03:00,10:15,10:35,0
+thursday,2017-07-06,thursday:Web Attack - Sql Injection,Web Attack - Sql Injection,INITIAL_COMPROMISE,2017-07-06 10:40:00-03:00,10:40,10:42,0
+thursday,2017-07-06,thursday:Infiltration,Infiltration,LATERAL_MOVEMENT,2017-07-06 14:19:00-03:00,14:19,15:45,300
+friday,2017-07-07,friday:Bot,Bot,LATERAL_MOVEMENT,2017-07-07 10:02:00-03:00,10:02,11:02,0
+friday,2017-07-07,friday:PortScan,PortScan,RECON,2017-07-07 13:55:00-03:00,13:55,15:29,37
+friday,2017-07-07,friday:DDoS,DDoS,EXFILTRATION,2017-07-07 15:56:00-03:00,15:56,16:16,0

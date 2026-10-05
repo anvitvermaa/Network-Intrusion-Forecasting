@@ -1,0 +1,47 @@
+{
+  "attackers": 11,
+  "results": {
+    "markov_flows": {
+      "every_flow": [
+        22957,
+        22968
+      ],
+      "at_changes": [
+        0,
+        11
+      ],
+      "at_changes_ci95": [
+        0.0,
+        0.28491415291815436
+      ]
+    },
+    "markov_changes": {
+      "every_flow": [
+        24,
+        22968
+      ],
+      "at_changes": [
+        11,
+        11
+      ],
+      "at_changes_ci95": [
+        0.7150858470818455,
+        1.0
+      ]
+    },
+    "advance_one": {
+      "every_flow": [
+        24,
+        22968
+      ],
+      "at_changes": [
+        11,
+        11
+      ],
+      "at_changes_ci95": [
+        0.7150858470818455,
+        1.0
+      ]
+    }
+  }
+}

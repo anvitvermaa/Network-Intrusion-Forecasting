@@ -1,0 +1,243 @@
+{
+  "features": [
+    "protocol",
+    "duration",
+    "tot_fwd_pkts",
+    "tot_bwd_pkts",
+    "orig_bytes",
+    "resp_bytes",
+    "fwd_packet_length_max",
+    "fwd_packet_length_min",
+    "fwd_packet_length_mean",
+    "fwd_packet_length_std",
+    "bwd_packet_length_max",
+    "bwd_packet_length_min",
+    "bwd_packet_length_mean",
+    "bwd_packet_length_std",
+    "flow_bytes_per_s",
+    "flow_pkts_per_s",
+    "flow_iat_mean",
+    "flow_iat_std",
+    "flow_iat_max",
+    "flow_iat_min",
+    "fwd_iat_total",
+    "fwd_iat_mean",
+    "fwd_iat_std",
+    "fwd_iat_max",
+    "fwd_iat_min",
+    "bwd_iat_total",
+    "bwd_iat_mean",
+    "bwd_iat_std",
+    "bwd_iat_max",
+    "bwd_iat_min",
+    "fwd_psh_flags",
+    "bwd_psh_flags",
+    "fwd_urg_flags",
+    "bwd_urg_flags",
+    "fwd_rst_flags",
+    "bwd_rst_flags",
+    "fwd_header_length",
+    "bwd_header_length",
+    "fwd_packets_per_s",
+    "bwd_packets_per_s",
+    "packet_length_min",
+    "packet_length_max",
+    "packet_length_mean",
+    "packet_length_std",
+    "packet_length_variance",
+    "fin_flag_count",
+    "syn_flag_count",
+    "rst_flag_count",
+    "psh_flag_count",
+    "ack_flag_count",
+    "urg_flag_count",
+    "cwr_flag_count",
+    "ece_flag_count",
+    "down_per_up_ratio",
+    "avg_packet_size",
+    "avg_fwd_segment_size",
+    "avg_bwd_segment_size",
+    "fwd_avg_bytes_per_bulk",
+    "fwd_avg_packets_per_bulk",
+    "fwd_avg_bulk_rate",
+    "bwd_avg_bytes_per_bulk",
+    "bwd_avg_packets_per_bulk",
+    "bwd_avg_bulk_rate",
+    "subflow_fwd_packets",
+    "subflow_fwd_bytes",
+    "subflow_bwd_packets",
+    "subflow_bwd_bytes",
+    "init_fwd_win_bytes",
+    "init_bwd_win_bytes",
+    "fwd_act_data_packets",
+    "fwd_seg_size_min",
+    "active_mean",
+    "active_std",
+    "active_max",
+    "active_min",
+    "idle_mean",
+    "idle_std",
+    "idle_max",
+    "idle_min",
+    "icmp_code",
+    "icmp_type",
+    "total_tcp_flow_time"
+  ],
+  "classes": [
+    "Attempted-relabel-as-Benign",
+    "Benign",
+    "Botnet",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS Slowloris",
+    "FTP-Patator",
+    "Heartbleed",
+    "Infiltration",
+    "Infiltration - Portscan",
+    "Portscan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - SQL Injection",
+    "Web Attack - XSS"
+  ],
+  "class_to_id": {
+    "Attempted-relabel-as-Benign": 0,
+    "Benign": 1,
+    "Botnet": 2,
+    "DDoS": 3,
+    "DoS GoldenEye": 4,
+    "DoS Hulk": 5,
+    "DoS Slowhttptest": 6,
+    "DoS Slowloris": 7,
+    "FTP-Patator": 8,
+    "Heartbleed": 9,
+    "Infiltration": 10,
+    "Infiltration - Portscan": 11,
+    "Portscan": 12,
+    "SSH-Patator": 13,
+    "Web Attack - Brute Force": 14,
+    "Web Attack - SQL Injection": 15,
+    "Web Attack - XSS": 16
+  },
+  "split": "dedup_stratified_primary",
+  "per_class_report": {
+    "Attempted-relabel-as-Benign": {
+      "precision": 0.8666882906260136,
+      "recall": 0.9951582867783985,
+      "f1-score": 0.926490984743412,
+      "support": 2685.0
+    },
+    "Benign": {
+      "precision": 0.9999650383878501,
+      "recall": 0.9980877005646169,
+      "f1-score": 0.9990254875182066,
+      "support": 429849.0
+    },
+    "Botnet": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 221.0
+    },
+    "DDoS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28543.0
+    },
+    "DoS GoldenEye": {
+      "precision": 0.999559277214632,
+      "recall": 0.9991189427312775,
+      "f1-score": 0.9993390614672836,
+      "support": 2270.0
+    },
+    "DoS Hulk": {
+      "precision": 0.9998737931469679,
+      "recall": 1.0,
+      "f1-score": 0.9999368925911902,
+      "support": 47535.0
+    },
+    "DoS Slowhttptest": {
+      "precision": 0.9923954372623575,
+      "recall": 1.0,
+      "f1-score": 0.9961832061068703,
+      "support": 522.0
+    },
+    "DoS Slowloris": {
+      "precision": 0.9991659716430359,
+      "recall": 0.9991659716430359,
+      "f1-score": 0.9991659716430359,
+      "support": 1199.0
+    },
+    "FTP-Patator": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1192.0
+    },
+    "Heartbleed": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "Infiltration": {
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "f1-score": 0.9523809523809523,
+      "support": 11.0
+    },
+    "Infiltration - Portscan": {
+      "precision": 0.7996031746031746,
+      "recall": 0.9793438639125152,
+      "f1-score": 0.880393227744402,
+      "support": 1646.0
+    },
+    "Portscan": {
+      "precision": 0.898876404494382,
+      "recall": 0.9504950495049505,
+      "f1-score": 0.9239653512993262,
+      "support": 505.0
+    },
+    "SSH-Patator": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 888.0
+    },
+    "Web Attack - Brute Force": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 22.0
+    },
+    "Web Attack - SQL Injection": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 4.0
+    },
+    "Web Attack - XSS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "accuracy": 0.9982633919938116,
+    "macro avg": {
+      "precision": 0.9542820031791225,
+      "recall": 0.9900271014250412,
+      "f1-score": 0.9692283020879223,
+      "support": 517100.0
+    },
+    "weighted avg": {
+      "precision": 0.9985163540077592,
+      "recall": 0.9982633919938116,
+      "f1-score": 0.9983361990261848,
+      "support": 517100.0
+    }
+  },
+  "note": "XGBoost, balanced class weights, near-dedup before split. Feature order frozen for Phase 3 serving."
+}

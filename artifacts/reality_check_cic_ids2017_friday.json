@@ -1,0 +1,94 @@
+{
+  "name": "CIC-IDS2017 Friday",
+  "summary": {
+    "WARN": 4,
+    "INFO": 1,
+    "PASS": 1,
+    "FAIL": 1
+  },
+  "checks": [
+    {
+      "check": 1,
+      "title": "Headline vs per-attack-type results",
+      "status": "WARN",
+      "summary": "Overall 97.4% caught at 0.130% false alarms. Weak types hidden by the average: Botnet, Portscan.",
+      "details": [
+        "overall: 97.4% of attacks caught, 0.130% of normal traffic flagged (354 false alarms)",
+        "largest attack type: DDoS = 98% of all attack flows",
+        "DDoS: 99.4% caught of 95,144 (95% CI 99%-99%)",
+        "Portscan: 28.2% caught of 1,683 (95% CI 26%-30%)",
+        "Botnet: 0.0% caught of 736 (95% CI 0%-0%)"
+      ],
+      "rule": "FAIL if under 50% of attacks are caught; WARN if one type is over half of all attacks or any type with 30+ examples is under 50%"
+    },
+    {
+      "check": 2,
+      "title": "False alarms as alerts per hour",
+      "status": "WARN",
+      "summary": "44.2 false alerts per hour over 8.0 hours; 99.6% of all alerts are real attacks.",
+      "details": [
+        "354 false alarms in total",
+        "an analyst can typically review tens of alerts per hour, not thousands"
+      ],
+      "rule": "PASS up to 10 per hour, WARN up to 100, FAIL above; depends on team size"
+    },
+    {
+      "check": 3,
+      "title": "Seen vs unseen attack types",
+      "status": "INFO",
+      "summary": "Unseen types: 97.4% caught (97,563 flows). Seen types: n/a (0 flows).",
+      "details": [
+        "unseen types in this data: Botnet, DDoS, Portscan",
+        "every attack type here is unseen, so this is a genuine zero-day test; there is nothing seen to compare against"
+      ],
+      "rule": "WARN if unseen types are caught 20+ points less often than seen ones"
+    },
+    {
+      "check": 4,
+      "title": "Classifier veto of detector alarms",
+      "status": "WARN",
+      "summary": "Of 96,823 attacks the detector caught, the final output called 1.8% normal. Worst: Botnet, 100.0% of its detector catches overruled.",
+      "details": [
+        "Botnet: 100.0% of 66 detector catches overruled",
+        "Portscan: 70.9% of 1,634 detector catches overruled",
+        "DDoS: 0.6% of 95,123 detector catches overruled"
+      ],
+      "rule": "WARN if more than 20% of the detector's correct alarms are overruled, overall or for any type with 30+ catches"
+    },
+    {
+      "check": 5,
+      "title": "Ranking quality without a threshold (AUROC)",
+      "status": "WARN",
+      "summary": "AUROC 0.908 (0.5 = chance, 1.0 = perfect ranking). Weak types: Botnet 0.55.",
+      "details": [
+        "DDoS: AUROC 0.913 (n=95,144)",
+        "Portscan: AUROC 0.804 (n=1,683)",
+        "Botnet: AUROC 0.553 (n=736)"
+      ],
+      "rule": "PASS at 0.9+ with every type (30+ examples) at 0.7+; WARN at 0.7-0.9 or if any type is below 0.7; FAIL below 0.7 overall"
+    },
+    {
+      "check": 6,
+      "title": "Identical rows in training and test data",
+      "status": "PASS",
+      "summary": "0.32% of test rows also appear exactly in the training data (82 feature columns compared).",
+      "details": [
+        "attack rows that also appear in training: 0.00% of 97,563",
+        "normal rows that also appear in training: 0.43% of 272,696 (short, common normal flows repeat naturally)",
+        "identical attack rows let a model memorise answers instead of learning patterns"
+      ],
+      "rule": "WARN above 1% overall, or above 1% of attack rows"
+    },
+    {
+      "check": 7,
+      "title": "Can these stage sequences test forecasting?",
+      "status": "FAIL",
+      "summary": "5 real stage changes in 1 episodes; the one-line rule 'advance one stage' gets 1/5 (20%, 95% CI 1%-72%); best possible for any rule using the current stage: 80%.",
+      "details": [
+        "distinct transitions: 5",
+        "uncertainty about the next stage: 0.400 bits (0 = fully predictable)"
+      ],
+      "rule": "FAIL if the trivial rule already reaches the ceiling, or there are fewer than 30 stage changes: no forecaster can then show an advantage"
+    }
+  ]
+}

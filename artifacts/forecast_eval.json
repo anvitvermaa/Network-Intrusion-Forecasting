@@ -1,0 +1,22 @@
+{
+  "n_episodes": 200,
+  "results": {
+    "1-step": {
+      "hmm_accuracy": 0.6944024205748865,
+      "naive_accuracy": 0.7473524962178517,
+      "n_predictions": 661
+    },
+    "2-step": {
+      "hmm_accuracy": 0.6572668112798264,
+      "naive_accuracy": 0.6572668112798264,
+      "n_predictions": 461
+    },
+    "3-step": {
+      "hmm_accuracy": 0.6339622641509434,
+      "naive_accuracy": 0.6566037735849056,
+      "n_predictions": 265
+    }
+  },
+  "framework": "OSP/TSP/3SP n-step-ahead (Ghafir/E-HiDNet)",
+  "benchmark_note": "Ghafir HMM ~43.6% OSP baseline"
+}

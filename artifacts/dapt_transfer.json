@@ -1,0 +1,2157 @@
+{
+  "features_model": [
+    "duration",
+    "orig_bytes",
+    "resp_bytes",
+    "tot_fwd_pkts",
+    "tot_bwd_pkts",
+    "flow_bytes_per_s",
+    "flow_pkts_per_s",
+    "protocol",
+    "fwd_packet_length_max",
+    "fwd_packet_length_min",
+    "fwd_packet_length_mean",
+    "fwd_packet_length_std",
+    "bwd_packet_length_max",
+    "bwd_packet_length_min",
+    "bwd_packet_length_mean",
+    "bwd_packet_length_std",
+    "flow_iat_mean",
+    "flow_iat_std",
+    "flow_iat_max",
+    "flow_iat_min",
+    "fwd_iat_total",
+    "fwd_iat_mean",
+    "fwd_iat_std",
+    "fwd_iat_max",
+    "fwd_iat_min",
+    "bwd_iat_total",
+    "bwd_iat_mean",
+    "bwd_iat_std",
+    "bwd_iat_max",
+    "bwd_iat_min",
+    "fwd_psh_flags",
+    "bwd_psh_flags",
+    "fwd_urg_flags",
+    "bwd_urg_flags",
+    "fwd_rst_flags",
+    "bwd_rst_flags",
+    "fwd_header_length",
+    "bwd_header_length",
+    "fwd_packets_per_s",
+    "bwd_packets_per_s",
+    "packet_length_min",
+    "packet_length_max",
+    "packet_length_mean",
+    "packet_length_std",
+    "packet_length_variance",
+    "fin_flag_count",
+    "syn_flag_count",
+    "rst_flag_count",
+    "psh_flag_count",
+    "ack_flag_count",
+    "urg_flag_count",
+    "cwr_flag_count",
+    "ece_flag_count",
+    "down_per_up_ratio",
+    "avg_packet_size",
+    "avg_fwd_segment_size",
+    "avg_bwd_segment_size",
+    "fwd_avg_bytes_per_bulk",
+    "fwd_avg_packets_per_bulk",
+    "fwd_avg_bulk_rate",
+    "bwd_avg_bytes_per_bulk",
+    "bwd_avg_packets_per_bulk",
+    "bwd_avg_bulk_rate",
+    "subflow_fwd_packets",
+    "subflow_fwd_bytes",
+    "subflow_bwd_packets",
+    "subflow_bwd_bytes",
+    "init_fwd_win_bytes",
+    "init_bwd_win_bytes",
+    "fwd_act_data_packets",
+    "fwd_seg_size_min",
+    "active_mean",
+    "active_std",
+    "active_max",
+    "active_min",
+    "idle_mean",
+    "idle_std",
+    "idle_max",
+    "idle_min",
+    "icmp_code",
+    "icmp_type",
+    "total_tcp_flow_time"
+  ],
+  "features_missing_in_dapt": [
+    "fwd_rst_flags",
+    "bwd_rst_flags",
+    "icmp_code",
+    "icmp_type",
+    "total_tcp_flow_time"
+  ],
+  "features_used_e2_e3": [
+    "duration",
+    "orig_bytes",
+    "resp_bytes",
+    "tot_fwd_pkts",
+    "tot_bwd_pkts",
+    "flow_bytes_per_s",
+    "flow_pkts_per_s",
+    "protocol",
+    "fwd_packet_length_max",
+    "fwd_packet_length_min",
+    "fwd_packet_length_mean",
+    "fwd_packet_length_std",
+    "bwd_packet_length_max",
+    "bwd_packet_length_min",
+    "bwd_packet_length_mean",
+    "bwd_packet_length_std",
+    "flow_iat_mean",
+    "flow_iat_std",
+    "flow_iat_max",
+    "flow_iat_min",
+    "fwd_iat_total",
+    "fwd_iat_mean",
+    "fwd_iat_std",
+    "fwd_iat_max",
+    "fwd_iat_min",
+    "bwd_iat_total",
+    "bwd_iat_mean",
+    "bwd_iat_std",
+    "bwd_iat_max",
+    "bwd_iat_min",
+    "fwd_psh_flags",
+    "bwd_psh_flags",
+    "fwd_urg_flags",
+    "bwd_urg_flags",
+    "fwd_header_length",
+    "bwd_header_length",
+    "fwd_packets_per_s",
+    "bwd_packets_per_s",
+    "packet_length_min",
+    "packet_length_max",
+    "packet_length_mean",
+    "packet_length_std",
+    "packet_length_variance",
+    "fin_flag_count",
+    "syn_flag_count",
+    "rst_flag_count",
+    "psh_flag_count",
+    "ack_flag_count",
+    "urg_flag_count",
+    "cwr_flag_count",
+    "ece_flag_count",
+    "down_per_up_ratio",
+    "avg_packet_size",
+    "avg_fwd_segment_size",
+    "avg_bwd_segment_size",
+    "fwd_avg_bytes_per_bulk",
+    "fwd_avg_packets_per_bulk",
+    "fwd_avg_bulk_rate",
+    "bwd_avg_bytes_per_bulk",
+    "bwd_avg_packets_per_bulk",
+    "bwd_avg_bulk_rate",
+    "subflow_fwd_packets",
+    "subflow_fwd_bytes",
+    "subflow_bwd_packets",
+    "subflow_bwd_bytes",
+    "init_fwd_win_bytes",
+    "init_bwd_win_bytes",
+    "fwd_act_data_packets",
+    "fwd_seg_size_min",
+    "active_mean",
+    "active_std",
+    "active_max",
+    "active_min",
+    "idle_mean",
+    "idle_std",
+    "idle_max",
+    "idle_min"
+  ],
+  "robust_subset": false,
+  "test_flows": 74559,
+  "experiments": {
+    "E1_deployed_zero_shot": {
+      "detector_only": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 48529,
+        "far": 0.940849166343544,
+        "far_ci95": [
+          0.9387786791873706,
+          0.9428698683537051
+        ],
+        "detected": 22975,
+        "recall": 0.9998259280212368,
+        "recall_ci95": [
+          0.9995543671252088,
+          0.9999525692730523
+        ],
+        "precision": 0.3213106959051242,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 15,
+            "rate": 1.0,
+            "ci95": [
+              0.7819806390894659,
+              1.0
+            ]
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 8602,
+            "rate": 0.999767549976755,
+            "ci95": [
+              0.9991605654994148,
+              0.999971847984003
+            ]
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 2451,
+            "rate": 1.0,
+            "ci95": [
+              0.9984960812440606,
+              1.0
+            ]
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 11907,
+            "rate": 0.999832059786716,
+            "ci95": [
+              0.9993934752672202,
+              0.9999796610139294
+            ]
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 140,
+            "rate": 0.9929078014184397,
+            "ci95": [
+              0.9611194863285075,
+              0.9998204571978639
+            ]
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 2408,
+            "rate": 1.0,
+            "ci95": [
+              0.9984692461171218,
+              1.0
+            ]
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 20,
+            "rate": 1.0,
+            "ci95": [
+              0.8315665290169146,
+              1.0
+            ]
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 7,
+            "rate": 1.0,
+            "ci95": [
+              0.5903836027749966,
+              1.0
+            ]
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 12,
+            "rate": 1.0,
+            "ci95": [
+              0.7353515306029488,
+              1.0
+            ]
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 6,
+            "rate": 1.0,
+            "ci95": [
+              0.5407418735600995,
+              1.0
+            ]
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 9969,
+            "rate": 0.9998996990972919,
+            "ci95": [
+              0.9994412872469163,
+              0.9999974606042289
+            ]
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ]
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 7741,
+            "rate": 0.9998708344097132,
+            "ci95": [
+              0.9992805478372058,
+              0.999996729815734
+            ]
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 13,
+            "rate": 1.0,
+            "ci95": [
+              0.752947361999529,
+              1.0
+            ]
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 84,
+            "rate": 1.0,
+            "ci95": [
+              0.9570350803704349,
+              1.0
+            ]
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 2573,
+            "rate": 0.9996114996114996,
+            "ci95": [
+              0.9978373356441274,
+              0.9999901640701352
+            ]
+          }
+        }
+      },
+      "detector_plus_classifier": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 389,
+        "far": 0.007541682822799534,
+        "far_ci95": [
+          0.006813191356637788,
+          0.008326384536041408
+        ],
+        "detected": 12,
+        "recall": 0.0005222159362896558,
+        "recall_ci95": [
+          0.00026986477968282436,
+          0.0009120282727297068
+        ],
+        "precision": 0.029925187032418952,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.218019360910534
+            ],
+            "labelled_as": {
+              "Benign": 15
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 4,
+            "rate": 0.00046490004649000463,
+            "ci95": [
+              0.00012668367908180673,
+              0.0011898970730702804
+            ],
+            "labelled_as": {
+              "Benign": 8600,
+              "DoS GoldenEye": 2,
+              "Heartbleed": 2
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 4,
+            "rate": 0.0016319869441044472,
+            "ci95": [
+              0.0004448349005163606,
+              0.004173216908045406
+            ],
+            "labelled_as": {
+              "Benign": 2447,
+              "DoS GoldenEye": 3,
+              "Heartbleed": 1
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 4,
+            "rate": 0.00033588042656814175,
+            "ci95": [
+              9.152345199209796e-05,
+              0.0008597619531011287
+            ],
+            "labelled_as": {
+              "Benign": 11905,
+              "Heartbleed": 4
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 1,
+            "rate": 0.0070921985815602835,
+            "ci95": [
+              0.00017954280213601265,
+              0.03888051367149244
+            ],
+            "labelled_as": {
+              "Benign": 140,
+              "DoS GoldenEye": 1
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 2,
+            "rate": 0.0008305647840531562,
+            "ci95": [
+              0.0001006010802605081,
+              0.002997032449024206
+            ],
+            "labelled_as": {
+              "Benign": 2406,
+              "Heartbleed": 2
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.1684334709830853
+            ],
+            "labelled_as": {
+              "Benign": 20
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.40961639722500337
+            ],
+            "labelled_as": {
+              "Benign": 7
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.2646484693970512
+            ],
+            "labelled_as": {
+              "Benign": 12
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.45925812643990044
+            ],
+            "labelled_as": {
+              "Benign": 6
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0003699294984328087
+            ],
+            "labelled_as": {
+              "Benign": 9970
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "Heartbleed": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 6,
+            "rate": 0.0007749935417204857,
+            "ci95": [
+              0.0002844603828748911,
+              0.0016860657071306796
+            ],
+            "labelled_as": {
+              "Benign": 7736,
+              "Heartbleed": 3,
+              "DoS GoldenEye": 3
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.24705263800047092
+            ],
+            "labelled_as": {
+              "Benign": 13
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 1,
+            "rate": 0.011904761904761904,
+            "ci95": [
+              0.0003013570588402435,
+              0.06455196843204025
+            ],
+            "labelled_as": {
+              "Benign": 83,
+              "DoS GoldenEye": 1
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0014321046590784882
+            ],
+            "labelled_as": {
+              "Benign": 2574
+            }
+          }
+        }
+      },
+      "detector_plus_classifier_plus_unknown": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 10687,
+        "far": 0.20719271035284995,
+        "far_ci95": [
+          0.20370189936234764,
+          0.21071650168036526
+        ],
+        "detected": 5413,
+        "recall": 0.23556290526132556,
+        "recall_ci95": [
+          0.23008821274045052,
+          0.241104557498736
+        ],
+        "precision": 0.33621118012422363,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 12,
+            "rate": 0.8,
+            "ci95": [
+              0.5191088661931469,
+              0.9566879948941633
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 12,
+              "Benign": 3
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 2676,
+            "rate": 0.3110181311018131,
+            "ci95": [
+              0.30124409543676645,
+              0.3209202882040308
+            ],
+            "labelled_as": {
+              "Benign": 5928,
+              "UNKNOWN_ATTACK": 2676
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 337,
+            "rate": 0.13749490004079967,
+            "ci95": [
+              0.1240968327557189,
+              0.15176545167423702
+            ],
+            "labelled_as": {
+              "Benign": 2114,
+              "UNKNOWN_ATTACK": 337
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 2388,
+            "rate": 0.20052061466118062,
+            "ci95": [
+              0.19336141754194147,
+              0.2078264865436808
+            ],
+            "labelled_as": {
+              "Benign": 9521,
+              "UNKNOWN_ATTACK": 2388
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 65,
+            "rate": 0.46099290780141844,
+            "ci95": [
+              0.3767776180332745,
+              0.5468813454007452
+            ],
+            "labelled_as": {
+              "Benign": 76,
+              "UNKNOWN_ATTACK": 65
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 254,
+            "rate": 0.10548172757475083,
+            "ci95": [
+              0.09349067491243498,
+              0.11844167937782868
+            ],
+            "labelled_as": {
+              "Benign": 2154,
+              "UNKNOWN_ATTACK": 254
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 15,
+            "rate": 0.75,
+            "ci95": [
+              0.5089541282920425,
+              0.9134285308985653
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 15,
+              "Benign": 5
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 3,
+            "rate": 0.42857142857142855,
+            "ci95": [
+              0.09898827844250786,
+              0.8159484323599169
+            ],
+            "labelled_as": {
+              "Benign": 4,
+              "UNKNOWN_ATTACK": 3
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 4,
+            "rate": 0.3333333333333333,
+            "ci95": [
+              0.09924609114958328,
+              0.6511244935811844
+            ],
+            "labelled_as": {
+              "Benign": 8,
+              "UNKNOWN_ATTACK": 4
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 5,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.35876542100232517,
+              0.9957892554855106
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 5,
+              "Benign": 1
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 3124,
+            "rate": 0.3133400200601805,
+            "ci95": [
+              0.304240481573298,
+              0.3225487080629393
+            ],
+            "labelled_as": {
+              "Benign": 6846,
+              "UNKNOWN_ATTACK": 3124
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 1836,
+            "rate": 0.23714802376646862,
+            "ci95": [
+              0.22770938294078366,
+              0.246784930840536
+            ],
+            "labelled_as": {
+              "Benign": 5906,
+              "UNKNOWN_ATTACK": 1836
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 13,
+            "rate": 1.0,
+            "ci95": [
+              0.752947361999529,
+              1.0
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 13
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 46,
+            "rate": 0.5476190476190477,
+            "ci95": [
+              0.43521354921009336,
+              0.6565690788454701
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 46,
+              "Benign": 38
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 46,
+            "rate": 0.017871017871017872,
+            "ci95": [
+              0.013112783991735258,
+              0.023766157180295736
+            ],
+            "labelled_as": {
+              "Benign": 2528,
+              "UNKNOWN_ATTACK": 46
+            }
+          }
+        }
+      }
+    },
+    "E2_shared_feature_retrain": {
+      "detector_only": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 32940,
+        "far": 0.638619620007755,
+        "far_ci95": [
+          0.6344563938090515,
+          0.6427672417120144
+        ],
+        "detected": 22530,
+        "recall": 0.9804604203838287,
+        "recall_ci95": [
+          0.9785870708418537,
+          0.9822108059071633
+        ],
+        "precision": 0.40616549486208764,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 11,
+            "rate": 0.7333333333333333,
+            "ci95": [
+              0.4489967589630295,
+              0.9221284537089564
+            ]
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 8599,
+            "rate": 0.9994188749418875,
+            "ci95": [
+              0.9986443734286309,
+              0.9998112842101353
+            ]
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 2443,
+            "rate": 0.9967360261117911,
+            "ci95": [
+              0.9935788522533995,
+              0.9985898269881973
+            ]
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 11477,
+            "rate": 0.9637249139306406,
+            "ci95": [
+              0.960209529392483,
+              0.9670112096984644
+            ]
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 138,
+            "rate": 0.9787234042553191,
+            "ci95": [
+              0.9390811384603234,
+              0.9955905768049501
+            ]
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 2405,
+            "rate": 0.9987541528239202,
+            "ci95": [
+              0.9963634636454585,
+              0.9997430026331401
+            ]
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 16,
+            "rate": 0.8,
+            "ci95": [
+              0.5633859970033317,
+              0.9426660029499672
+            ]
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 7,
+            "rate": 1.0,
+            "ci95": [
+              0.5903836027749966,
+              1.0
+            ]
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 10,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.5158622513140328,
+              0.9791374745399076
+            ]
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 2,
+            "rate": 0.3333333333333333,
+            "ci95": [
+              0.043271868292741676,
+              0.7772219044964879
+            ]
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 9968,
+            "rate": 0.9997993981945837,
+            "ci95": [
+              0.999275547151487,
+              0.9999757052673999
+            ]
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ]
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 7401,
+            "rate": 0.9559545337122191,
+            "ci95": [
+              0.9511444200441953,
+              0.9604174585194392
+            ]
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 13,
+            "rate": 1.0,
+            "ci95": [
+              0.752947361999529,
+              1.0
+            ]
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 82,
+            "rate": 0.9761904761904762,
+            "ci95": [
+              0.9166255334330945,
+              0.997103437029467
+            ]
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 2486,
+            "rate": 0.9658119658119658,
+            "ci95": [
+              0.9580474054675175,
+              0.9724917593131063
+            ]
+          }
+        }
+      },
+      "detector_plus_classifier": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 663,
+        "far": 0.012853819309810005,
+        "far_ci95": [
+          0.01189950702289457,
+          0.013863519931654966
+        ],
+        "detected": 1188,
+        "recall": 0.05169937769267592,
+        "recall_ci95": [
+          0.04887162242709967,
+          0.05464119104308688
+        ],
+        "precision": 0.6418152350081038,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 1,
+            "rate": 0.06666666666666667,
+            "ci95": [
+              0.0016864302413527013,
+              0.3194845665783034
+            ],
+            "labelled_as": {
+              "Benign": 11,
+              "Attempted-relabel-as-Benign": 3,
+              "DoS Slowloris": 1
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 1066,
+            "rate": 0.12389586238958623,
+            "ci95": [
+              0.11700443500554328,
+              0.1310430733338434
+            ],
+            "labelled_as": {
+              "Benign": 5609,
+              "Attempted-relabel-as-Benign": 1929,
+              "DoS Slowhttptest": 1057
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 16,
+            "rate": 0.006527947776417789,
+            "ci95": [
+              0.0037357537680083276,
+              0.010579385538023406
+            ],
+            "labelled_as": {
+              "Benign": 2098,
+              "Attempted-relabel-as-Benign": 337,
+              "DoS Slowhttptest": 9
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 105,
+            "rate": 0.008816861197413721,
+            "ci95": [
+              0.007216820485869208,
+              0.01066342546048638
+            ],
+            "labelled_as": {
+              "Benign": 11450,
+              "Attempted-relabel-as-Benign": 354,
+              "DoS Slowloris": 74
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 2,
+            "rate": 0.014184397163120567,
+            "ci95": [
+              0.001722436154767222,
+              0.050298329586637054
+            ],
+            "labelled_as": {
+              "Benign": 111,
+              "Attempted-relabel-as-Benign": 28,
+              "DoS GoldenEye": 1
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 4,
+            "rate": 0.0016611295681063123,
+            "ci95": [
+              0.0004527815344982403,
+              0.004247642028951045
+            ],
+            "labelled_as": {
+              "Benign": 2079,
+              "Attempted-relabel-as-Benign": 325,
+              "Heartbleed": 4
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 6,
+            "rate": 0.3,
+            "ci95": [
+              0.11893159040572769,
+              0.5427891822762891
+            ],
+            "labelled_as": {
+              "Benign": 11,
+              "DoS Slowhttptest": 5,
+              "Attempted-relabel-as-Benign": 3
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.40961639722500337
+            ],
+            "labelled_as": {
+              "Benign": 7
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.2646484693970512
+            ],
+            "labelled_as": {
+              "Benign": 12
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.45925812643990044
+            ],
+            "labelled_as": {
+              "Benign": 6
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 1075,
+            "rate": 0.1078234704112337,
+            "ci95": [
+              0.10180040093293814,
+              0.11407668355057617
+            ],
+            "labelled_as": {
+              "Benign": 6992,
+              "Attempted-relabel-as-Benign": 1903,
+              "DoS Slowhttptest": 1061
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "Heartbleed": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 96,
+            "rate": 0.012399896667527771,
+            "ci95": [
+              0.010055183138231963,
+              0.01512158848921666
+            ],
+            "labelled_as": {
+              "Benign": 7292,
+              "Attempted-relabel-as-Benign": 354,
+              "DoS Slowloris": 67
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 2,
+            "rate": 0.15384615384615385,
+            "ci95": [
+              0.019206671982528477,
+              0.45447105567655766
+            ],
+            "labelled_as": {
+              "Benign": 10,
+              "DoS Slowloris": 1,
+              "DoS Slowhttptest": 1
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 1,
+            "rate": 0.011904761904761904,
+            "ci95": [
+              0.0003013570588402435,
+              0.06455196843204025
+            ],
+            "labelled_as": {
+              "Benign": 74,
+              "Attempted-relabel-as-Benign": 9,
+              "DoS Slowhttptest": 1
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0014321046590784882
+            ],
+            "labelled_as": {
+              "Benign": 2574
+            }
+          }
+        }
+      },
+      "detector_plus_classifier_plus_unknown": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 13499,
+        "far": 0.261709965102753,
+        "far_ci95": [
+          0.2579203419280987,
+          0.2655264204192328
+        ],
+        "detected": 20508,
+        "recall": 0.8924670351190217,
+        "recall_ci95": [
+          0.8883900904771939,
+          0.8964444094001373
+        ],
+        "precision": 0.6030523127591378,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 9,
+            "rate": 0.6,
+            "ci95": [
+              0.3228697662062816,
+              0.8366356761404865
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 9,
+              "Benign": 5,
+              "Attempted-relabel-as-Benign": 1
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 8344,
+            "rate": 0.9697814969781497,
+            "ci95": [
+              0.9659433283134228,
+              0.9732969831630408
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 8344,
+              "Benign": 257,
+              "Attempted-relabel-as-Benign": 3
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 2346,
+            "rate": 0.9571603427172583,
+            "ci95": [
+              0.948375647468223,
+              0.9648301006023229
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2346,
+              "Benign": 101,
+              "Attempted-relabel-as-Benign": 4
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 9809,
+            "rate": 0.8236627760517256,
+            "ci95": [
+              0.8166971944523296,
+              0.8304697774340064
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 9809,
+              "Benign": 2007,
+              "Attempted-relabel-as-Benign": 93
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 88,
+            "rate": 0.624113475177305,
+            "ci95": [
+              0.5386859571948172,
+              0.70420947270869
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 88,
+              "Benign": 52,
+              "Attempted-relabel-as-Benign": 1
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 2290,
+            "rate": 0.9509966777408638,
+            "ci95": [
+              0.9416023982164279,
+              0.9592733233814954
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2290,
+              "Benign": 118
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 15,
+            "rate": 0.75,
+            "ci95": [
+              0.5089541282920425,
+              0.9134285308985653
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 15,
+              "Benign": 4,
+              "Attempted-relabel-as-Benign": 1
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 5,
+            "rate": 0.7142857142857143,
+            "ci95": [
+              0.2904208637373427,
+              0.9633074338239145
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 5,
+              "Benign": 2
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 4,
+            "rate": 0.3333333333333333,
+            "ci95": [
+              0.09924609114958328,
+              0.6511244935811844
+            ],
+            "labelled_as": {
+              "Benign": 8,
+              "UNKNOWN_ATTACK": 4
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 2,
+            "rate": 0.3333333333333333,
+            "ci95": [
+              0.043271868292741676,
+              0.7772219044964879
+            ],
+            "labelled_as": {
+              "Benign": 4,
+              "UNKNOWN_ATTACK": 2
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 9521,
+            "rate": 0.9549648946840521,
+            "ci95": [
+              0.9507090694513659,
+              0.9589523158805872
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 9521,
+              "Benign": 446,
+              "Attempted-relabel-as-Benign": 3
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 6076,
+            "rate": 0.7848101265822784,
+            "ci95": [
+              0.7754851021013089,
+              0.7939202551677165
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 6076,
+              "Benign": 1573,
+              "Attempted-relabel-as-Benign": 93
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 12,
+            "rate": 0.9230769230769231,
+            "ci95": [
+              0.6397025647321225,
+              0.9980543715026533
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 12,
+              "Benign": 1
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 57,
+            "rate": 0.6785714285714286,
+            "ci95": [
+              0.5677575201996715,
+              0.7763737796048662
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 57,
+              "Benign": 24,
+              "Attempted-relabel-as-Benign": 3
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 2436,
+            "rate": 0.9463869463869464,
+            "ci95": [
+              0.9369701976030459,
+              0.9547710592459622
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2436,
+              "Benign": 138
+            }
+          }
+        }
+      }
+    },
+    "E3_local_benign_refit": {
+      "detector_only": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 17419,
+        "far": 0.33770841411399766,
+        "far_ci95": [
+          0.33362660384166304,
+          0.34180849453893014
+        ],
+        "detected": 7532,
+        "recall": 0.3277775360111406,
+        "recall_ci95": [
+          0.3217087095483889,
+          0.33388995014242445
+        ],
+        "precision": 0.3018716684702016,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 1,
+            "rate": 0.06666666666666667,
+            "ci95": [
+              0.0016864302413527013,
+              0.3194845665783034
+            ]
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 4244,
+            "rate": 0.4932589493258949,
+            "ci95": [
+              0.4826406252406819,
+              0.5038818409163686
+            ]
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 99,
+            "rate": 0.04039167686658507,
+            "ci95": [
+              0.03294734086822672,
+              0.04895793151540099
+            ]
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 3188,
+            "rate": 0.267696699974809,
+            "ci95": [
+              0.2597602397952536,
+              0.2757468511766387
+            ]
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 53,
+            "rate": 0.375886524822695,
+            "ci95": [
+              0.29579052729130995,
+              0.46131404280518284
+            ]
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 67,
+            "rate": 0.02782392026578073,
+            "ci95": [
+              0.021626762977153,
+              0.03520211912296712
+            ]
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 8,
+            "rate": 0.4,
+            "ci95": [
+              0.1911900607253072,
+              0.6394574126925103
+            ]
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 5,
+            "rate": 0.7142857142857143,
+            "ci95": [
+              0.2904208637373427,
+              0.9633074338239145
+            ]
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 5,
+            "rate": 0.4166666666666667,
+            "ci95": [
+              0.15165222980843013,
+              0.7233303143178942
+            ]
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 1,
+            "rate": 0.16666666666666666,
+            "ci95": [
+              0.00421074451448947,
+              0.6412345789976748
+            ]
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 4704,
+            "rate": 0.47181544633901706,
+            "ci95": [
+              0.4619757865238225,
+              0.48167157866620997
+            ]
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ]
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 2151,
+            "rate": 0.27783518470679414,
+            "ci95": [
+              0.2678779651933942,
+              0.2879599053814953
+            ]
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 12,
+            "rate": 0.9230769230769231,
+            "ci95": [
+              0.6397025647321225,
+              0.9980543715026533
+            ]
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 37,
+            "rate": 0.44047619047619047,
+            "ci95": [
+              0.3322247474508193,
+              0.5530476718747114
+            ]
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 487,
+            "rate": 0.18919968919968919,
+            "ci95": [
+              0.17423479050185148,
+              0.2048749652096289
+            ]
+          }
+        }
+      },
+      "detector_plus_classifier": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 539,
+        "far": 0.010449786739046141,
+        "far_ci95": [
+          0.009590161323235603,
+          0.011365151198291094
+        ],
+        "detected": 1102,
+        "recall": 0.04795683014926672,
+        "recall_ci95": [
+          0.04522968101196501,
+          0.050799030824011236
+        ],
+        "precision": 0.6715417428397319,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.218019360910534
+            ],
+            "labelled_as": {
+              "Benign": 15
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 1060,
+            "rate": 0.12319851231985124,
+            "ci95": [
+              0.11632417581963089,
+              0.13032911338955544
+            ],
+            "labelled_as": {
+              "Benign": 7542,
+              "DoS Slowhttptest": 1056,
+              "DoS GoldenEye": 2
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 11,
+            "rate": 0.00448796409628723,
+            "ci95": [
+              0.00224243988004377,
+              0.00801598704352884
+            ],
+            "labelled_as": {
+              "Benign": 2436,
+              "DoS Slowhttptest": 4,
+              "DoS GoldenEye": 4
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 31,
+            "rate": 0.0026030733059030984,
+            "ci95": [
+              0.0017693262729343061,
+              0.0036928372747948336
+            ],
+            "labelled_as": {
+              "Benign": 11878,
+              "DoS Slowhttptest": 21,
+              "Heartbleed": 9
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 2,
+            "rate": 0.014184397163120567,
+            "ci95": [
+              0.001722436154767222,
+              0.050298329586637054
+            ],
+            "labelled_as": {
+              "Benign": 137,
+              "Attempted-relabel-as-Benign": 2,
+              "DoS GoldenEye": 1
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 4,
+            "rate": 0.0016611295681063123,
+            "ci95": [
+              0.0004527815344982403,
+              0.004247642028951045
+            ],
+            "labelled_as": {
+              "Benign": 2402,
+              "Heartbleed": 4,
+              "Attempted-relabel-as-Benign": 2
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 1,
+            "rate": 0.05,
+            "ci95": [
+              0.0012650894979498038,
+              0.24873276277202777
+            ],
+            "labelled_as": {
+              "Benign": 18,
+              "Attempted-relabel-as-Benign": 1,
+              "DoS Slowloris": 1
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.40961639722500337
+            ],
+            "labelled_as": {
+              "Benign": 7
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.2646484693970512
+            ],
+            "labelled_as": {
+              "Benign": 12
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.45925812643990044
+            ],
+            "labelled_as": {
+              "Benign": 6
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 1061,
+            "rate": 0.10641925777331995,
+            "ci95": [
+              0.10043161049916309,
+              0.11263788706460717
+            ],
+            "labelled_as": {
+              "Benign": 8909,
+              "DoS Slowhttptest": 1060,
+              "DoS GoldenEye": 1
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "Heartbleed": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 29,
+            "rate": 0.0037458021183156805,
+            "ci95": [
+              0.002510014132422702,
+              0.005375200585352161
+            ],
+            "labelled_as": {
+              "Benign": 7712,
+              "DoS Slowhttptest": 18,
+              "Heartbleed": 6
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 2,
+            "rate": 0.15384615384615385,
+            "ci95": [
+              0.019206671982528477,
+              0.45447105567655766
+            ],
+            "labelled_as": {
+              "Benign": 11,
+              "DoS Slowloris": 1,
+              "DoS Slowhttptest": 1
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 1,
+            "rate": 0.011904761904761904,
+            "ci95": [
+              0.0003013570588402435,
+              0.06455196843204025
+            ],
+            "labelled_as": {
+              "Benign": 83,
+              "DoS Slowhttptest": 1
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 0,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0014321046590784882
+            ],
+            "labelled_as": {
+              "Benign": 2574
+            }
+          }
+        }
+      },
+      "detector_plus_classifier_plus_unknown": {
+        "benign_flows": 51580,
+        "attack_flows": 22979,
+        "false_alarms": 3999,
+        "far": 0.07753005040713455,
+        "far_ci95": [
+          0.07523626777153591,
+          0.0798715074816465
+        ],
+        "detected": 7326,
+        "recall": 0.3188128291048348,
+        "recall_ci95": [
+          0.31278892448087625,
+          0.32488259184102997
+        ],
+        "precision": 0.646887417218543,
+        "per_stage": {
+          "Data Exfiltration": {
+            "n": 15,
+            "detected": 1,
+            "rate": 0.06666666666666667,
+            "ci95": [
+              0.0016864302413527013,
+              0.3194845665783034
+            ],
+            "labelled_as": {
+              "Benign": 14,
+              "UNKNOWN_ATTACK": 1
+            }
+          },
+          "Establish Foothold": {
+            "n": 8604,
+            "detected": 4192,
+            "rate": 0.4872152487215249,
+            "ci95": [
+              0.4766014654419775,
+              0.4978376945257836
+            ],
+            "labelled_as": {
+              "Benign": 4411,
+              "UNKNOWN_ATTACK": 4192,
+              "Attempted-relabel-as-Benign": 1
+            }
+          },
+          "Lateral Movement": {
+            "n": 2451,
+            "detected": 74,
+            "rate": 0.03019175846593227,
+            "ci95": [
+              0.0237797721942366,
+              0.0377561485005074
+            ],
+            "labelled_as": {
+              "Benign": 2377,
+              "UNKNOWN_ATTACK": 74
+            }
+          },
+          "Reconnaissance": {
+            "n": 11909,
+            "detected": 3059,
+            "rate": 0.2568645562179864,
+            "ci95": [
+              0.24903587694667173,
+              0.2648122388751805
+            ],
+            "labelled_as": {
+              "Benign": 8850,
+              "UNKNOWN_ATTACK": 3059
+            }
+          }
+        },
+        "per_activity": {
+          "Account Bruteforce": {
+            "n": 141,
+            "detected": 24,
+            "rate": 0.1702127659574468,
+            "ci95": [
+              0.11220858046659904,
+              0.24259377045909394
+            ],
+            "labelled_as": {
+              "Benign": 116,
+              "UNKNOWN_ATTACK": 24,
+              "Attempted-relabel-as-Benign": 1
+            }
+          },
+          "Account Discovery": {
+            "n": 2408,
+            "detected": 43,
+            "rate": 0.017857142857142856,
+            "ci95": [
+              0.012952680929786168,
+              0.02397876717871887
+            ],
+            "labelled_as": {
+              "Benign": 2365,
+              "UNKNOWN_ATTACK": 43
+            }
+          },
+          "Backdoor": {
+            "n": 20,
+            "detected": 8,
+            "rate": 0.4,
+            "ci95": [
+              0.1911900607253072,
+              0.6394574126925103
+            ],
+            "labelled_as": {
+              "Benign": 12,
+              "UNKNOWN_ATTACK": 8
+            }
+          },
+          "CSRF": {
+            "n": 7,
+            "detected": 3,
+            "rate": 0.42857142857142855,
+            "ci95": [
+              0.09898827844250786,
+              0.8159484323599169
+            ],
+            "labelled_as": {
+              "Benign": 4,
+              "UNKNOWN_ATTACK": 3
+            }
+          },
+          "Command Injection": {
+            "n": 12,
+            "detected": 2,
+            "rate": 0.16666666666666666,
+            "ci95": [
+              0.020862525460092384,
+              0.48413774868596704
+            ],
+            "labelled_as": {
+              "Benign": 10,
+              "UNKNOWN_ATTACK": 2
+            }
+          },
+          "Data Exfiltration": {
+            "n": 6,
+            "detected": 1,
+            "rate": 0.16666666666666666,
+            "ci95": [
+              0.00421074451448947,
+              0.6412345789976748
+            ],
+            "labelled_as": {
+              "Benign": 5,
+              "UNKNOWN_ATTACK": 1
+            }
+          },
+          "Directory Bruteforce": {
+            "n": 9970,
+            "detected": 4661,
+            "rate": 0.4675025075225677,
+            "ci95": [
+              0.45766925361951694,
+              0.47735475470925254
+            ],
+            "labelled_as": {
+              "Benign": 5309,
+              "UNKNOWN_ATTACK": 4661
+            }
+          },
+          "Malware Download": {
+            "n": 2,
+            "detected": 2,
+            "rate": 1.0,
+            "ci95": [
+              0.15811388300841897,
+              1.0
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 2
+            }
+          },
+          "Network Scan": {
+            "n": 7742,
+            "detected": 2083,
+            "rate": 0.26905192456729526,
+            "ci95": [
+              0.2591974407413415,
+              0.2790805465141508
+            ],
+            "labelled_as": {
+              "Benign": 5659,
+              "UNKNOWN_ATTACK": 2083
+            }
+          },
+          "Privilege Escalation": {
+            "n": 13,
+            "detected": 11,
+            "rate": 0.8461538461538461,
+            "ci95": [
+              0.5455289443234422,
+              0.9807933280174715
+            ],
+            "labelled_as": {
+              "UNKNOWN_ATTACK": 11,
+              "Benign": 2
+            }
+          },
+          "SQL Injection": {
+            "n": 84,
+            "detected": 26,
+            "rate": 0.30952380952380953,
+            "ci95": [
+              0.21314007482768166,
+              0.41979596587729223
+            ],
+            "labelled_as": {
+              "Benign": 58,
+              "UNKNOWN_ATTACK": 26
+            }
+          },
+          "Web Vulnerability Scan": {
+            "n": 2574,
+            "detected": 462,
+            "rate": 0.1794871794871795,
+            "ci95": [
+              0.1648386339606526,
+              0.19486855061190766
+            ],
+            "labelled_as": {
+              "Benign": 2112,
+              "UNKNOWN_ATTACK": 462
+            }
+          }
+        }
+      }
+    }
+  },
+  "operating_point_thursday_benign_far": 0.326517145612623,
+  "e2_tau": 0.999,
+  "e3_monday_benign_fit_calibrate": [
+    8492,
+    3640
+  ],
+  "drift_ks_top": [
+    [
+      "subflow_bwd_packets",
+      1.0
+    ],
+    [
+      "init_fwd_win_bytes",
+      1.0
+    ],
+    [
+      "fwd_seg_size_min",
+      0.99465
+    ],
+    [
+      "subflow_fwd_packets",
+      0.7034847840422025
+    ],
+    [
+      "flow_iat_min",
+      0.5780762281569404
+    ],
+    [
+      "orig_bytes",
+      0.5600712825585229
+    ],
+    [
+      "down_per_up_ratio",
+      0.4996437026046818
+    ],
+    [
+      "bwd_iat_min",
+      0.47642441477085395
+    ],
+    [
+      "bwd_packet_length_min",
+      0.47087665677546986
+    ],
+    [
+      "bwd_packet_length_mean",
+      0.4672887240356083
+    ],
+    [
+      "avg_bwd_segment_size",
+      0.4672887240356083
+    ],
+    [
+      "fwd_header_length",
+      0.4606443290471481
+    ],
+    [
+      "init_bwd_win_bytes",
+      0.4537586547972305
+    ],
+    [
+      "packet_length_std",
+      0.45300590174744476
+    ],
+    [
+      "packet_length_variance",
+      0.45300590174744476
+    ],
+    [
+      "tot_fwd_pkts",
+      0.4488259314210352
+    ],
+    [
+      "fwd_iat_total",
+      0.4438259314210352
+    ],
+    [
+      "fwd_iat_mean",
+      0.4438259314210352
+    ],
+    [
+      "fwd_iat_max",
+      0.4438259314210352
+    ],
+    [
+      "fwd_iat_min",
+      0.43507593142103523
+    ]
+  ],
+  "drift_ks_median": 0.3448131552917903,
+  "account_bruteforce_dst_ports": {
+    "9002": 135,
+    "53192": 1,
+    "54712": 1,
+    "47448": 1,
+    "54362": 1
+  }
+}

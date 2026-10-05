@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-08-29T12:21:15.337092+00:00",
+  "source": "Distrinet corrected CIC-IDS2017 (5 parquet, by day)",
+  "has_timestamps": false,
+  "split_mode": "temporal_by_day_from_filename",
+  "cleaning_per_file": {
+    "Benign-Monday.parquet": {
+      "rows_loaded": 350718,
+      "rows_dropped_nan_or_inf": 0,
+      "rows_dropped_duplicates": 0,
+      "rows_after_clean": 350718
+    },
+    "Bruteforce-Tuesday.parquet": {
+      "rows_loaded": 307071,
+      "rows_dropped_nan_or_inf": 0,
+      "rows_dropped_duplicates": 0,
+      "rows_after_clean": 307071
+    },
+    "DoS-Wednesday.parquet": {
+      "rows_loaded": 477871,
+      "rows_dropped_nan_or_inf": 0,
+      "rows_dropped_duplicates": 0,
+      "rows_after_clean": 477871
+    },
+    "Infiltration-Webattacks-Thursday.parquet": {
+      "rows_loaded": 281439,
+      "rows_dropped_nan_or_inf": 0,
+      "rows_dropped_duplicates": 0,
+      "rows_after_clean": 281439
+    },
+    "Portscan-DDos-Botnet-Friday.parquet": {
+      "rows_loaded": 370259,
+      "rows_dropped_nan_or_inf": 0,
+      "rows_dropped_duplicates": 0,
+      "rows_after_clean": 370259
+    }
+  },
+  "label_distribution_total": {
+    "Benign": 1496505,
+    "FTP-Patator": 3972,
+    "SSH-Patator": 2961,
+    "Attempted-relabel-as-Benign": 8966,
+    "DoS Hulk": 158449,
+    "DoS GoldenEye": 7567,
+    "DoS Slowloris": 3998,
+    "DoS Slowhttptest": 1741,
+    "Heartbleed": 11,
+    "Infiltration - Portscan": 5485,
+    "Web Attack - Brute Force": 73,
+    "Infiltration": 36,
+    "Web Attack - XSS": 18,
+    "Web Attack - SQL Injection": 13,
+    "DDoS": 95144,
+    "Portscan": 1683,
+    "Botnet": 736
+  },
+  "split_sizes": {
+    "train": 1135660,
+    "val": 281439,
+    "test": 370259
+  },
+  "split_stage_distribution": {
+    "train": {
+      "NONE": 956961,
+      "EXFILTRATION": 171755,
+      "INITIAL_COMPROMISE": 6944
+    },
+    "val": {
+      "NONE": 275814,
+      "LATERAL_MOVEMENT": 5521,
+      "INITIAL_COMPROMISE": 104
+    },
+    "test": {
+      "NONE": 272696,
+      "EXFILTRATION": 95144,
+      "RECON": 1683,
+      "LATERAL_MOVEMENT": 736
+    }
+  }
+}

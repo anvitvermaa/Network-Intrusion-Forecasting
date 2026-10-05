@@ -1,0 +1,75 @@
+# environment and caches
+.venv/
+__pycache__/
+*.pyc
+mlruns/
+.ipynb_checkpoints/
+
+# datasets: download from the official sources (see README)
+data/
+
+# large or rebuildable binaries
+*.parquet
+*.joblib
+*.npz
+
+# generated live output (the public site should not show a stale run)
+streaming/forecasts.jsonl
+
+# the paper and anything about it: never on GitHub
+paper/
+*.tex
+*.bib
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.aux
+*.out
+*.synctex.gz
+
+# notes, logs and handoffs (personal, or contain personal paths)
+*.log
+VIVA_QA.md
+PROJECT_LOG.md
+*HANDOFF*
+*handoff*
+*.transcript
+artifacts/*.log
+RESULTS_STAGE_A.md
+PROJECT_COMPLETE.md
+PRODUCTION_ROADMAP.md
+
+# backups and old website versions
+*.bak
+*.pre_tiefix
+*_backup*
+webapp_old/
+webapp_before_forecast_fix/
+webapp_backup*/
+webapp_before_transfer_patch/
+webapp_old_dark/
+
+# secrets and credentials
+.env
+.env.*
+kaggle.json
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*credential*
+*secret*
+*.token
+
+# editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# unwanted folders (user didn't care, we exclude to be safe)
+config/
+evaluation/
+scripts/
+notebooks/
+artifacts/drift_report.html

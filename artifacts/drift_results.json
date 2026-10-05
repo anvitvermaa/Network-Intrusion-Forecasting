@@ -1,0 +1,16 @@
+{
+  "drifted_count": 4,
+  "drift_share": 0.5714285714285714,
+  "per_column_pvalue": {
+    "duration": 0.10880926041970589,
+    "orig_bytes": 0.042306587294170375,
+    "resp_bytes": 0.7869540818293747,
+    "tot_fwd_pkts": 0.8055830788840513,
+    "tot_bwd_pkts": 0.5973830433857864,
+    "flow_bytes_per_s": 0.030284102553625528,
+    "flow_pkts_per_s": 0.052617908138393905
+  },
+  "alert": true,
+  "threshold": 0.5,
+  "method": "Kolmogorov-Smirnov (Evidently)"
+}

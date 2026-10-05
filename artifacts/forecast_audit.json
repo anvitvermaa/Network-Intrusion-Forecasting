@@ -1,0 +1,1103 @@
+{
+  "stages": [
+    "NONE",
+    "RECON",
+    "INITIAL_COMPROMISE",
+    "LATERAL_MOVEMENT",
+    "EXFILTRATION"
+  ],
+  "order": [
+    "RECON",
+    "INITIAL_COMPROMISE",
+    "LATERAL_MOVEMENT",
+    "EXFILTRATION"
+  ],
+  "prior_strength": 15.0,
+  "n_boot": 2000,
+  "synthetic": {
+    "diagnostics": {
+      "n_episodes": 200,
+      "n_pairs": 661,
+      "n_stage_changes": 511,
+      "share_changes": 0.773071104387292,
+      "distinct_transitions": 6,
+      "observed_states": 4,
+      "cond_entropy_bits": 0.974166207074182,
+      "ceiling_first_order": 0.7473524962178517,
+      "fano_bound": 0.8176614074938415,
+      "transition_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          54,
+          164,
+          35,
+          1
+        ],
+        [
+          0,
+          0,
+          23,
+          145,
+          16
+        ],
+        [
+          0,
+          0,
+          0,
+          38,
+          150
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          35
+        ]
+      ]
+    },
+    "k": {
+      "1": {
+        "persistence": {
+          "acc_all": 0.22692889561270801,
+          "n_all": 661,
+          "acc_all_ci95": [
+            0.20401854714064915,
+            0.2496462264150943
+          ],
+          "acc_changes": 0.0,
+          "n_changes": 511,
+          "acc_changes_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_all_exact95": [
+            0.19552073576965945,
+            0.2607971848742516
+          ],
+          "acc_changes_exact95": [
+            0.0,
+            0.007192948204441034
+          ]
+        },
+        "advance_one": {
+          "acc_all": 0.7473524962178517,
+          "n_all": 661,
+          "acc_all_ci95": [
+            0.7170945740893403,
+            0.7767765938710813
+          ],
+          "acc_changes": 0.898238747553816,
+          "n_changes": 511,
+          "acc_changes_ci95": [
+            0.8712258211847774,
+            0.9226415094339623
+          ],
+          "acc_all_exact95": [
+            0.7124105400674091,
+            0.7800684043237918
+          ],
+          "acc_changes_exact95": [
+            0.8686988817066107,
+            0.923062557252144
+          ]
+        },
+        "project_hmm": {
+          "acc_all": 0.6944024205748865,
+          "n_all": 661,
+          "acc_all_ci95": [
+            0.6636342395921836,
+            0.7259041722445337
+          ],
+          "acc_changes": 0.898238747553816,
+          "n_changes": 511,
+          "acc_changes_ci95": [
+            0.8712258211847774,
+            0.9226415094339623
+          ],
+          "acc_all_exact95": [
+            0.6577162124632671,
+            0.7293419418659319
+          ],
+          "acc_changes_exact95": [
+            0.8686988817066107,
+            0.923062557252144
+          ]
+        }
+      },
+      "2": {
+        "persistence": {
+          "acc_all": 0.0,
+          "n_all": 461,
+          "acc_all_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_changes": 0.0,
+          "n_changes": 353,
+          "acc_changes_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_all_exact95": [
+            0.0,
+            0.007969977669916532
+          ],
+          "acc_changes_exact95": [
+            0.0,
+            0.010395671020519066
+          ]
+        },
+        "advance_one": {
+          "acc_all": 0.6572668112798264,
+          "n_all": 461,
+          "acc_all_ci95": [
+            0.6145774943946188,
+            0.7006372880887575
+          ],
+          "acc_changes": 0.7365439093484419,
+          "n_changes": 353,
+          "acc_changes_ci95": [
+            0.691165844950697,
+            0.7821319792948899
+          ],
+          "acc_all_exact95": [
+            0.6119536045123697,
+            0.7005470245483858
+          ],
+          "acc_changes_exact95": [
+            0.6873099840306742,
+            0.781759728593197
+          ]
+        },
+        "project_hmm": {
+          "acc_all": 0.6572668112798264,
+          "n_all": 461,
+          "acc_all_ci95": [
+            0.6145774943946188,
+            0.7006372880887575
+          ],
+          "acc_changes": 0.7365439093484419,
+          "n_changes": 353,
+          "acc_changes_ci95": [
+            0.691165844950697,
+            0.7821319792948899
+          ],
+          "acc_all_exact95": [
+            0.6119536045123697,
+            0.7005470245483858
+          ],
+          "acc_changes_exact95": [
+            0.6873099840306742,
+            0.781759728593197
+          ]
+        }
+      },
+      "3": {
+        "persistence": {
+          "acc_all": 0.0,
+          "n_all": 265,
+          "acc_all_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_changes": 0.0,
+          "n_changes": 188,
+          "acc_changes_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_all_exact95": [
+            0.0,
+            0.013823860460125676
+          ],
+          "acc_changes_exact95": [
+            0.0,
+            0.01943044662682331
+          ]
+        },
+        "advance_one": {
+          "acc_all": 0.6566037735849056,
+          "n_all": 265,
+          "acc_all_ci95": [
+            0.6116802141157812,
+            0.703560972039233
+          ],
+          "acc_changes": 0.75,
+          "n_changes": 188,
+          "acc_changes_ci95": [
+            0.6931216931216931,
+            0.8052667140825035
+          ],
+          "acc_all_exact95": [
+            0.5960378036102268,
+            0.7136215734489699
+          ],
+          "acc_changes_exact95": [
+            0.6817796104231472,
+            0.8101584596675556
+          ]
+        },
+        "project_hmm": {
+          "acc_all": 0.6339622641509434,
+          "n_all": 265,
+          "acc_all_ci95": [
+            0.5880281690140845,
+            0.6825611325611325
+          ],
+          "acc_changes": 0.75,
+          "n_changes": 188,
+          "acc_changes_ci95": [
+            0.6931216931216931,
+            0.8052667140825035
+          ],
+          "acc_all_exact95": [
+            0.5728335723316758,
+            0.692057511999314
+          ],
+          "acc_changes_exact95": [
+            0.6817796104231472,
+            0.8101584596675556
+          ]
+        }
+      }
+    }
+  },
+  "cic_schedule": {
+    "events": [
+      {
+        "day": "tuesday",
+        "label": "FTP-Patator",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "tuesday",
+        "label": "SSH-Patator",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "wednesday",
+        "label": "DoS slowloris",
+        "kill_chain_stage": "EXFILTRATION"
+      },
+      {
+        "day": "wednesday",
+        "label": "DoS Slowhttptest",
+        "kill_chain_stage": "EXFILTRATION"
+      },
+      {
+        "day": "wednesday",
+        "label": "DoS Hulk",
+        "kill_chain_stage": "EXFILTRATION"
+      },
+      {
+        "day": "wednesday",
+        "label": "DoS GoldenEye",
+        "kill_chain_stage": "EXFILTRATION"
+      },
+      {
+        "day": "wednesday",
+        "label": "Heartbleed",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "thursday",
+        "label": "Web Attack - Brute Force",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "thursday",
+        "label": "Web Attack - XSS",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "thursday",
+        "label": "Web Attack - Sql Injection",
+        "kill_chain_stage": "INITIAL_COMPROMISE"
+      },
+      {
+        "day": "thursday",
+        "label": "Infiltration",
+        "kill_chain_stage": "LATERAL_MOVEMENT"
+      },
+      {
+        "day": "friday",
+        "label": "Bot",
+        "kill_chain_stage": "LATERAL_MOVEMENT"
+      },
+      {
+        "day": "friday",
+        "label": "PortScan",
+        "kill_chain_stage": "RECON"
+      },
+      {
+        "day": "friday",
+        "label": "DDoS",
+        "kill_chain_stage": "EXFILTRATION"
+      }
+    ],
+    "collapsed_path": [
+      "INITIAL_COMPROMISE",
+      "EXFILTRATION",
+      "INITIAL_COMPROMISE",
+      "LATERAL_MOVEMENT",
+      "RECON",
+      "EXFILTRATION"
+    ],
+    "diagnostics_events": {
+      "n_episodes": 1,
+      "n_pairs": 13,
+      "n_stage_changes": 5,
+      "share_changes": 0.38461538461538464,
+      "distinct_transitions": 5,
+      "observed_states": 4,
+      "cond_entropy_bits": 0.981145192474113,
+      "ceiling_first_order": 0.6923076923076923,
+      "fano_bound": 0.8157957893699,
+      "transition_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          3
+        ]
+      ]
+    },
+    "diagnostics_runs": {
+      "n_episodes": 1,
+      "n_pairs": 5,
+      "n_stage_changes": 5,
+      "share_changes": 1.0,
+      "distinct_transitions": 5,
+      "observed_states": 4,
+      "cond_entropy_bits": 0.4,
+      "ceiling_first_order": 0.8,
+      "fano_bound": 0.944020363905775,
+      "transition_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "k1_runs_fixed_rules": {
+      "persistence": {
+        "acc_all": 0.0,
+        "n_all": 5,
+        "acc_all_ci95": [
+          0.0,
+          0.0
+        ],
+        "acc_changes": 0.0,
+        "n_changes": 5,
+        "acc_changes_ci95": [
+          0.0,
+          0.0
+        ],
+        "acc_all_exact95": [
+          0.0,
+          0.5218237501049814
+        ],
+        "acc_changes_exact95": [
+          0.0,
+          0.5218237501049814
+        ]
+      },
+      "advance_one": {
+        "acc_all": 0.2,
+        "n_all": 5,
+        "acc_all_ci95": [
+          0.2,
+          0.2
+        ],
+        "acc_changes": 0.2,
+        "n_changes": 5,
+        "acc_changes_ci95": [
+          0.2,
+          0.2
+        ],
+        "acc_all_exact95": [
+          0.0050507633794680575,
+          0.7164179361180895
+        ],
+        "acc_changes_exact95": [
+          0.0050507633794680575,
+          0.7164179361180895
+        ]
+      },
+      "project_hmm": {
+        "acc_all": 0.2,
+        "n_all": 5,
+        "acc_all_ci95": [
+          0.2,
+          0.2
+        ],
+        "acc_changes": 0.2,
+        "n_changes": 5,
+        "acc_changes_ci95": [
+          0.2,
+          0.2
+        ],
+        "acc_all_exact95": [
+          0.0050507633794680575,
+          0.7164179361180895
+        ],
+        "acc_changes_exact95": [
+          0.0050507633794680575,
+          0.7164179361180895
+        ]
+      }
+    }
+  },
+  "dapt2020": {
+    "rows": 86691,
+    "unparsed_timestamps": 0,
+    "unknown_stage_labels": [],
+    "attacker_paths": {
+      "184.98.36.245": {
+        "flows": 3567,
+        "path": [
+          "RECON",
+          "INITIAL_COMPROMISE"
+        ]
+      },
+      "192.168.3.29": {
+        "flows": 2294,
+        "path": [
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT"
+        ]
+      },
+      "192.168.3.30": {
+        "flows": 1,
+        "path": [
+          "EXFILTRATION"
+        ]
+      },
+      "192.168.3.34": {
+        "flows": 42,
+        "path": [
+          "LATERAL_MOVEMENT"
+        ]
+      },
+      "206.207.50.35": {
+        "flows": 2,
+        "path": [
+          "INITIAL_COMPROMISE"
+        ]
+      },
+      "206.207.50.50": {
+        "flows": 16594,
+        "path": [
+          "RECON",
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT",
+          "EXFILTRATION"
+        ]
+      },
+      "209.147.138.11": {
+        "flows": 18,
+        "path": [
+          "RECON",
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT"
+        ]
+      },
+      "209.147.138.154": {
+        "flows": 42,
+        "path": [
+          "RECON"
+        ]
+      },
+      "209.147.138.211": {
+        "flows": 252,
+        "path": [
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT"
+        ]
+      },
+      "209.147.138.38": {
+        "flows": 154,
+        "path": [
+          "RECON",
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT"
+        ]
+      },
+      "72.201.228.135": {
+        "flows": 13,
+        "path": [
+          "INITIAL_COMPROMISE",
+          "LATERAL_MOVEMENT"
+        ]
+      }
+    },
+    "diagnostics_flows": {
+      "n_episodes": 10,
+      "n_pairs": 22968,
+      "n_stage_changes": 11,
+      "share_changes": 0.0004789272030651341,
+      "distinct_transitions": 3,
+      "observed_states": 4,
+      "cond_entropy_bits": 0.005929663780724782,
+      "ceiling_first_order": 0.9995210727969349,
+      "fano_bound": 0.999584145641789,
+      "transition_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          11904,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8596,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2444,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          13
+        ]
+      ]
+    },
+    "diagnostics_runs": {
+      "n_episodes": 7,
+      "n_pairs": 11,
+      "n_stage_changes": 11,
+      "share_changes": 1.0,
+      "distinct_transitions": 3,
+      "observed_states": 4,
+      "cond_entropy_bits": 0.0,
+      "ceiling_first_order": 1.0,
+      "fano_bound": 1.0,
+      "transition_counts": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "flows_k1_loo": {
+      "persistence": {
+        "acc_all": 0.9995210727969349,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.9928799739142548,
+          0.9997563738636353
+        ],
+        "acc_changes": 0.0,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          0.0,
+          0.0
+        ],
+        "acc_all_exact95": [
+          0.9991432289007371,
+          0.9997608977945964
+        ],
+        "acc_changes_exact95": [
+          0.0,
+          0.28491415291815436
+        ]
+      },
+      "advance_one": {
+        "acc_all": 0.0010449320794148381,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.0006036566015968797,
+          0.007120026085745238
+        ],
+        "acc_changes": 1.0,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          1.0,
+          1.0
+        ],
+        "acc_all_exact95": [
+          0.0006696188425706667,
+          0.0015543797286463302
+        ],
+        "acc_changes_exact95": [
+          0.7150858470818455,
+          1.0
+        ]
+      },
+      "majority_next": {
+        "acc_all": 0.3672936259143156,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.010528460641398838,
+          0.4951466162363477
+        ],
+        "acc_changes": 0.09090909090909091,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          0.0,
+          0.3333333333333333
+        ],
+        "acc_all_exact95": [
+          0.3610545788669404,
+          0.3735662714867682
+        ],
+        "acc_changes_exact95": [
+          0.002298972213814267,
+          0.4127799169883827
+        ]
+      },
+      "markov1": {
+        "acc_all": 0.9995210727969349,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.9928799739142548,
+          0.9997563738636353
+        ],
+        "acc_changes": 0.0,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          0.0,
+          0.0
+        ],
+        "acc_all_exact95": [
+          0.9991432289007371,
+          0.9997608977945964
+        ],
+        "acc_changes_exact95": [
+          0.0,
+          0.28491415291815436
+        ]
+      },
+      "project_hmm": {
+        "acc_all": 0.0004789272030651341,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.0002436261363646971,
+          0.007120026085745238
+        ],
+        "acc_changes": 1.0,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          1.0,
+          1.0
+        ],
+        "acc_all_exact95": [
+          0.00023910220540356543,
+          0.0008567710992629083
+        ],
+        "acc_changes_exact95": [
+          0.7150858470818455,
+          1.0
+        ]
+      },
+      "project_method_refit": {
+        "acc_all": 0.9989550679205852,
+        "n_all": 22968,
+        "acc_all_ci95": [
+          0.9928799739142548,
+          0.9993963433984031
+        ],
+        "acc_changes": 0.0,
+        "n_changes": 11,
+        "acc_changes_ci95": [
+          0.0,
+          0.0
+        ],
+        "acc_all_exact95": [
+          0.9984456202713536,
+          0.9993303811574293
+        ],
+        "acc_changes_exact95": [
+          0.0,
+          0.28491415291815436
+        ]
+      }
+    },
+    "runs_k": {
+      "1": {
+        "persistence": {
+          "acc_all": 0.0,
+          "n_all": 11,
+          "acc_all_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_changes": 0.0,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_all_exact95": [
+            0.0,
+            0.28491415291815436
+          ],
+          "acc_changes_exact95": [
+            0.0,
+            0.28491415291815436
+          ]
+        },
+        "advance_one": {
+          "acc_all": 1.0,
+          "n_all": 11,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.7150858470818455,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.7150858470818455,
+            1.0
+          ]
+        },
+        "majority_next": {
+          "acc_all": 0.5454545454545454,
+          "n_all": 11,
+          "acc_all_ci95": [
+            0.363474025974026,
+            0.7777777777777778
+          ],
+          "acc_changes": 0.5454545454545454,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            0.363474025974026,
+            0.7777777777777778
+          ],
+          "acc_all_exact95": [
+            0.23379359765934518,
+            0.8325119059362929
+          ],
+          "acc_changes_exact95": [
+            0.23379359765934518,
+            0.8325119059362929
+          ]
+        },
+        "markov1": {
+          "acc_all": 1.0,
+          "n_all": 11,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.7150858470818455,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.7150858470818455,
+            1.0
+          ]
+        },
+        "project_hmm": {
+          "acc_all": 1.0,
+          "n_all": 11,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.7150858470818455,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.7150858470818455,
+            1.0
+          ]
+        },
+        "project_method_refit": {
+          "acc_all": 1.0,
+          "n_all": 11,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 11,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.7150858470818455,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.7150858470818455,
+            1.0
+          ]
+        }
+      },
+      "2": {
+        "persistence": {
+          "acc_all": 0.0,
+          "n_all": 4,
+          "acc_all_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_changes": 0.0,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            0.0,
+            0.0
+          ],
+          "acc_all_exact95": [
+            0.0,
+            0.6023646356164746
+          ],
+          "acc_changes_exact95": [
+            0.0,
+            0.6023646356164746
+          ]
+        },
+        "advance_one": {
+          "acc_all": 1.0,
+          "n_all": 4,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.3976353643835253,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.3976353643835253,
+            1.0
+          ]
+        },
+        "majority_next": {
+          "acc_all": 0.75,
+          "n_all": 4,
+          "acc_all_ci95": [
+            0.5,
+            1.0
+          ],
+          "acc_changes": 0.75,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            0.5,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.19412044968324338,
+            0.9936905367902902
+          ],
+          "acc_changes_exact95": [
+            0.19412044968324338,
+            0.9936905367902902
+          ]
+        },
+        "markov1": {
+          "acc_all": 1.0,
+          "n_all": 4,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.3976353643835253,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.3976353643835253,
+            1.0
+          ]
+        },
+        "project_hmm": {
+          "acc_all": 1.0,
+          "n_all": 4,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.3976353643835253,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.3976353643835253,
+            1.0
+          ]
+        },
+        "project_method_refit": {
+          "acc_all": 1.0,
+          "n_all": 4,
+          "acc_all_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_changes": 1.0,
+          "n_changes": 4,
+          "acc_changes_ci95": [
+            1.0,
+            1.0
+          ],
+          "acc_all_exact95": [
+            0.3976353643835253,
+            1.0
+          ],
+          "acc_changes_exact95": [
+            0.3976353643835253,
+            1.0
+          ]
+        }
+      }
+    }
+  }
+}

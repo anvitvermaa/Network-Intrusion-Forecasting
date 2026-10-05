@@ -1,0 +1,81 @@
+{
+  "n_test_flows": 370259,
+  "overall_detection": {
+    "precision": 0.9999586887819387,
+    "recall": 0.9924049075981674,
+    "f1": 0.9961674786124729,
+    "false_alarm_rate": 1.4668348637310411e-05,
+    "tp": 96822,
+    "fp": 4,
+    "fn": 741,
+    "tn": 272692
+  },
+  "two_stage_benefit": {
+    "Botnet": {
+      "n": 736,
+      "anomaly_only": 0.08967391304347826,
+      "with_classifier": 0.08967391304347826
+    },
+    "DDoS": {
+      "n": 95144,
+      "anomaly_only": 0.9997792819305473,
+      "with_classifier": 0.9997792819305473
+    },
+    "Portscan": {
+      "n": 1683,
+      "anomaly_only": 0.9708853238265003,
+      "with_classifier": 0.9566250742721331
+    }
+  },
+  "per_class_report": {
+    "Attempted-relabel-as-Benign": {
+      "precision": 0.8329853862212944,
+      "recall": 0.9991652754590985,
+      "f1-score": 0.9085388994307401,
+      "support": 1198.0
+    },
+    "Benign": {
+      "precision": 0.9972756952308122,
+      "recall": 0.9991049657824367,
+      "f1-score": 0.9981894924322992,
+      "support": 271498.0
+    },
+    "Botnet": {
+      "precision": 1.0,
+      "recall": 0.08967391304347826,
+      "f1-score": 0.16458852867830423,
+      "support": 736.0
+    },
+    "DDoS": {
+      "precision": 1.0,
+      "recall": 0.9997792819305473,
+      "f1-score": 0.9998896287848129,
+      "support": 95144.0
+    },
+    "Infiltration - Portscan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "Portscan": {
+      "precision": 0.9987593052109182,
+      "recall": 0.9566250742721331,
+      "f1-score": 0.9772382397572079,
+      "support": 1683.0
+    },
+    "accuracy": 0.9972775813687176,
+    "macro avg": {
+      "precision": 0.8048367311105041,
+      "recall": 0.6740580850812824,
+      "f1-score": 0.6747407981805607,
+      "support": 370259.0
+    },
+    "weighted avg": {
+      "precision": 0.9974563349091803,
+      "recall": 0.9972775813687176,
+      "f1-score": 0.9965840354282359,
+      "support": 370259.0
+    }
+  }
+}

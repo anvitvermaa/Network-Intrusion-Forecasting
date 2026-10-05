@@ -1,0 +1,22 @@
+split,label,type,n,flagged,flagged_rate
+train,Attempted-relabel-as-Benign,benign,5771,5595,0.9695026858430081
+train,Benign,benign,951190,324751,0.34141549007033295
+train,DoS GoldenEye,ATTACK,7567,7567,1.0
+train,DoS Hulk,ATTACK,158449,158449,1.0
+train,DoS Slowhttptest,ATTACK,1741,1739,0.9988512349224583
+train,DoS Slowloris,ATTACK,3998,3862,0.9659829914957478
+train,FTP-Patator,ATTACK,3972,3958,0.9964753272910373
+train,Heartbleed,ATTACK,11,11,1.0
+train,SSH-Patator,ATTACK,2961,2949,0.9959473150962512
+val,Attempted-relabel-as-Benign,benign,1997,1923,0.9629444166249375
+val,Benign,benign,273817,88135,0.3218755592238612
+val,Infiltration,ATTACK,36,36,1.0
+val,Infiltration - Portscan,ATTACK,5485,5300,0.9662716499544212
+val,Web Attack - Brute Force,ATTACK,73,73,1.0
+val,Web Attack - SQL Injection,ATTACK,13,10,0.7692307692307693
+val,Web Attack - XSS,ATTACK,18,18,1.0
+test,Attempted-relabel-as-Benign,benign,1198,1198,1.0
+test,Benign,benign,271498,83312,0.3068604556939646
+test,Botnet,ATTACK,736,66,0.08967391304347826
+test,DDoS,ATTACK,95144,95123,0.9997792819305473
+test,Portscan,ATTACK,1683,1634,0.9708853238265003

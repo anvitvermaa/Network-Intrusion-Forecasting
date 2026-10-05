@@ -1,0 +1,278 @@
+{
+  "attack_flows_raw": 97243,
+  "attack_flows_dedup": 80402,
+  "groups": {
+    "AA": {
+      "flows": 18407,
+      "first": "2021-06-27 22:57:33.140000",
+      "last": "2021-07-01 01:19:09.148000",
+      "stages": {
+        "Reconnaissance": 18407
+      },
+      "top_src": {
+        "10.8.10.87": 18407
+      }
+    },
+    "APT": {
+      "flows": 61988,
+      "first": "2021-05-26 19:25:02.149000",
+      "last": "2021-07-06 06:33:46.442000",
+      "stages": {
+        "Lateral Movement": 27297,
+        "Establish Foothold": 27100,
+        "Data Exfiltration": 6565,
+        "Reconnaissance": 677,
+        "Cover up": 349
+      },
+      "top_src": {
+        "10.1.3.8": 27719,
+        "192.168.0.11": 27123,
+        "10.1.3.17": 6469,
+        "10.8.10.76": 543,
+        "10.8.10.70": 134
+      }
+    },
+    "nan": {
+      "flows": 7,
+      "first": "2021-06-25 18:57:36.632000",
+      "last": "2021-06-29 21:00:51.761000",
+      "stages": {
+        "Establish Foothold": 7
+      },
+      "top_src": {
+        "192.168.0.11": 7
+      }
+    }
+  },
+  "apt_windows": {
+    "1h": {
+      "active_windows": 467,
+      "share_windows_multi_stage": 0.5053533190578159,
+      "dominant_stage_changes": 29,
+      "distinct_transitions": 8,
+      "cond_entropy_bits": 0.8218032386823195,
+      "ceiling_first_order": 0.7586206896551724,
+      "dominant_path": [
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "EXFILTRATION",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "COVER_UP",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "EXFILTRATION"
+      ],
+      "second_half_at_changes": {
+        "persistence": {
+          "hits": 0,
+          "n": 12,
+          "ci95": [
+            0.0,
+            0.2646484693970512
+          ]
+        },
+        "advance_one": {
+          "hits": 6,
+          "n": 12,
+          "ci95": [
+            0.21094463823929666,
+            0.7890553617607033
+          ]
+        },
+        "majority_next": {
+          "hits": 5,
+          "n": 12,
+          "ci95": [
+            0.15165222980843013,
+            0.7233303143178942
+          ]
+        },
+        "markov1": {
+          "hits": 5,
+          "n": 12,
+          "ci95": [
+            0.15165222980843013,
+            0.7233303143178942
+          ]
+        }
+      }
+    },
+    "6h": {
+      "active_windows": 94,
+      "share_windows_multi_stage": 0.5,
+      "dominant_stage_changes": 15,
+      "distinct_transitions": 7,
+      "cond_entropy_bits": 0.7961319006571027,
+      "ceiling_first_order": 0.8,
+      "dominant_path": [
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "EXFILTRATION",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "EXFILTRATION"
+      ],
+      "second_half_at_changes": {
+        "persistence": {
+          "hits": 0,
+          "n": 7,
+          "ci95": [
+            0.0,
+            0.40961639722500337
+          ]
+        },
+        "advance_one": {
+          "hits": 3,
+          "n": 7,
+          "ci95": [
+            0.09898827844250786,
+            0.8159484323599169
+          ]
+        },
+        "majority_next": {
+          "hits": 3,
+          "n": 7,
+          "ci95": [
+            0.09898827844250786,
+            0.8159484323599169
+          ]
+        },
+        "markov1": {
+          "hits": 6,
+          "n": 7,
+          "ci95": [
+            0.4212768029568048,
+            0.9963897031380994
+          ]
+        }
+      }
+    },
+    "1D": {
+      "active_windows": 32,
+      "share_windows_multi_stage": 0.5,
+      "dominant_stage_changes": 8,
+      "distinct_transitions": 5,
+      "cond_entropy_bits": 0.75,
+      "ceiling_first_order": 0.75,
+      "dominant_path": [
+        "LATERAL_MOVEMENT",
+        "RECON",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "LATERAL_MOVEMENT",
+        "INITIAL_COMPROMISE",
+        "EXFILTRATION"
+      ],
+      "second_half_at_changes": {
+        "persistence": {
+          "hits": 0,
+          "n": 6,
+          "ci95": [
+            0.0,
+            0.45925812643990044
+          ]
+        },
+        "advance_one": {
+          "hits": 2,
+          "n": 6,
+          "ci95": [
+            0.043271868292741676,
+            0.7772219044964879
+          ]
+        },
+        "majority_next": {
+          "hits": 2,
+          "n": 6,
+          "ci95": [
+            0.043271868292741676,
+            0.7772219044964879
+          ]
+        },
+        "markov1": {
+          "hits": 2,
+          "n": 6,
+          "ci95": [
+            0.043271868292741676,
+            0.7772219044964879
+          ]
+        }
+      }
+    }
+  },
+  "apt_stage_activity_pairs": [
+    [
+      "Lateral Movement",
+      "Maintain Access",
+      27123
+    ],
+    [
+      "Establish Foothold",
+      "Encrypted Channel: Symmetric Cryptography",
+      27100
+    ],
+    [
+      "Data Exfiltration",
+      "Data Transfer Size Limits",
+      6032
+    ],
+    [
+      "Reconnaissance",
+      "Remote System Discovery",
+      677
+    ],
+    [
+      "Data Exfiltration",
+      "Exfiltration over C2 channel",
+      445
+    ],
+    [
+      "Cover up",
+      "Remove Traces",
+      349
+    ],
+    [
+      "Lateral Movement",
+      "Remote System Discovery",
+      174
+    ],
+    [
+      "Data Exfiltration",
+      "Unsecured Credentials",
+      88
+    ]
+  ]
+}

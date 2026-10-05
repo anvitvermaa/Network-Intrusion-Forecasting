@@ -1,0 +1,129 @@
+{
+  "stages": [
+    "NONE",
+    "RECON",
+    "INITIAL_COMPROMISE",
+    "LATERAL_MOVEMENT",
+    "EXFILTRATION"
+  ],
+  "transit)on_matrix": [
+    [
+      0.8999999999999999,
+      0.059999999999999984,
+      0.019999999999999997,
+      0.009999999999999998,
+      0.009999999999999998
+    ],
+    [
+      0.05,
+      0.15,
+      0.7,
+      0.05,
+      0.05
+    ],
+    [
+      0.044117647058823525,
+      0.01764705882352941,
+      0.11470588235294117,
+      0.676470588235294,
+      0.14705882352941174
+    ],
+    [
+      0.05,
+      0.02,
+      0.029999999999999995,
+      0.2,
+      0.7
+    ],
+    [
+      0.4,
+      0.05,
+      0.05,
+      0.1,
+      0.4
+    ]
+  ],
+  "start_probabilities": [
+    0.6000000000000001,
+    0.10000000000000002,
+    0.10000000000000002,
+    0.10000000000000002,
+    0.10000000000000002
+  ],
+  "next_stage_forecasts": {
+    "NONE": [
+      [
+        "NONE",
+        0.8999999999999999
+      ],
+      [
+        "RECON",
+        0.059999999999999984
+      ],
+      [
+        "INITIAL_COMPROMISE",
+        0.019999999999999997
+      ]
+    ],
+    "RECON": [
+      [
+        "INITIAL_COMPROMISE",
+        0.7
+      ],
+      [
+        "RECON",
+        0.15
+      ],
+      [
+        "NONE",
+        0.05
+      ]
+    ],
+    "INITIAL_COMPROMISE": [
+      [
+        "LATERAL_MOVEMENT",
+        0.676470588235294
+      ],
+      [
+        "EXFILTRATION",
+        0.14705882352941174
+      ],
+      [
+        "INITIAL_COMPROMISE",
+        0.11470588235294117
+      ]
+    ],
+    "LATERAL_MOVEMENT": [
+      [
+        "EXFILTRATION",
+        0.7
+      ],
+      [
+        "LATERAL_MOVEMENT",
+        0.2
+      ],
+      [
+        "NONE",
+        0.05
+      ]
+    ],
+    "EXFILTRATION": [
+      [
+        "NONE",
+        0.4
+      ],
+      [
+        "EXFILTRATION",
+        0.4
+      ],
+      [
+        "LATERAL_MOVEMENT",
+        0.1
+      ]
+    ]
+  },
+  "n_episodes": 3,
+  "n_real_transitions_observed": 2,
+  "method": "Bayesian MLE: attack-only stage counts + domain kill-chain prior pseudo-counts; hmmlearn CategoricalHMM; Viterbi.",
+  "limitation": "CIC-IDS2017 is one-attack-per-day so multi-stage transitions are sparse; domain prior fills gaps. Time-to-next (HSMM dwell time) needs Phase-5 PCAP timestamps."
+}

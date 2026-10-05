@@ -1,0 +1,23 @@
+{
+  "files": 173,
+  "rows": 6877157,
+  "malformed_rows": 13169,
+  "attack_rows": 97243,
+  "attack_rows_unparsed": 0,
+  "stage_counts": {
+    "Reconnaissance": 34796,
+    "Lateral Movement": 27445,
+    "Establish Foothold": 27118,
+    "Data Exfiltration": 7522,
+    "Cover up": 362
+  },
+  "signature_counts": {
+    "APT": 63125,
+    "AA": 34111,
+    "nan": 7
+  },
+  "response_counts": {
+    "Benign": 62447,
+    "Detected": 34796
+  }
+}
